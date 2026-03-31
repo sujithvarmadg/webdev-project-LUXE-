@@ -1,0 +1,6 @@
+.container{
+    border-radius:27px;
+}
+ .btn.btn-success{  /*or u can write it as ".btn-sucess" also */
+    box-shadow:15px 2px 8px #60e995;
+}

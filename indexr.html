@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Premium Fashion Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styler.css">
+    <script src="scriptr.js"></script>
+
+</head>
+<body>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span class="cart-subtotal-label">Subtotal:</span>
+                <span class="cart-subtotal-value" id="cartSubtotal">$0</span>
+            </div>
+            <button class="cart-checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Header Top -->
+    <div class="header-top">
+         ✨ Grand Opening Sale - Up to 50% Off | Free Worldwide Shipping on Orders ₹1550+✨
+    </div>
+
+    <!-- Header Main -->
+    <header class="header-main">
+        <div class="header-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#c9a961;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 30 20 L 30 80 L 70 80 L 70 70 L 40 70 L 40 20 Z" fill="url(#logoGradient)"/>
+                    <path d="M 50 10 L 60 20 L 50 30 L 40 20 Z" fill="#c9a961" opacity="0.8"/>
+                    <path d="M 25 45 Q 50 40 75 45" stroke="#d4a5a5" stroke-width="1.5" fill="none" opacity="0.6"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-main">LUXE</span>
+                    <span class="logo-tagline">Premium Fashion</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#categories">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <button class="icon-btn" id="cartBtn" title="Cart">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="icon-btn" title="Account">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-label">Spring Collection 2025</span>
+                <h1 class="hero-title">
+                    Redefine Your
+                    <span class="hero-title-gradient">Elegance</span>
+                </h1>
+                <p class="hero-description">
+                    Discover our meticulously curated collection of timeless pieces that blend
+                    contemporary sophistication with classic elegance. Fashion that speaks to your soul.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn-primary">Explore Collection <span>→</span></a>
+                    <a href="#about" class="btn-secondary">Our Story <span>↓</span></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80" alt="Fashion model">
+                </div>
+                <div class="hero-badge hero-badge-1">
+                    <div class="badge-number">500+</div>
+                    <div class="badge-text">Unique Pieces</div>
+                </div>
+                <div class="hero-badge hero-badge-2">
+                    <div class="badge-number">15K+</div>
+                    <div class="badge-text">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Discover</span>
+                <h2 class="section-title">Shop by Collection</h2>
+                <p class="section-description">Explore our carefully selected categories</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" data-category="Women's">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Women's Collection">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Women's</h3>
+                        <p class="category-count">280+ Exclusive Items</p>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Men's">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80" alt="Men's Collection">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Men's</h3>
+                        <p class="category-count">195+ Premium Pieces</p>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Accessories">
+                    <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWNjZXNzb3JpZXN8ZW58MHx8MHx8fDA%3D" alt="Accessories Collection">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Accessories</h3>
+                        <p class="category-count">120+ Curated Items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Trending Now</span>
+                <h2 class="section-title">Featured Selections</h2>
+                <p class="section-description">Handpicked favorites that embody refined style</p>
+            </div>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <span class="filter-label">Category:</span>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">All Products</option>
+                        <option value="Outerwear">Outerwear</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Women's">Women's</option>
+                        <option value="Men's">Men's</option>
+                        <option value="Footwear">Footwear</option>
+                        <option value="Bags">Bags</option>
+                        <option value="Timepieces">Timepieces</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Sort By:</span>
+                    <select class="filter-select" id="sortFilter">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section" id="about">
+        <div class="container">
+            <div class="banner-content-wrapper">
+                <div class="banner-text">
+                    <h2>Where Artistry Meets Fashion</h2>
+                    <p>Every piece in our collection is a testament to exceptional craftsmanship and timeless design.</p>
+                    <a href="#" class="btn-primary">Discover Our Heritage</a>
+                    <div class="banner-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15K+</div>
+                            <div class="stat-label">Global Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">600+</div>
+                            <div class="stat-label">Unique Designs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Designer Brands</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600091106710-7be582d40984?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="Fashion boutique interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="contact">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the LUXE Society</h2>
+                <p>Be the first to discover new arrivals and exclusive collections</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>LUXE</h3>
+                    <p>Curating exceptional fashion experiences since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">f</a>
+                        <a href="#" class="social-btn">𝕏</a>
+                        <a href="#" class="social-btn">📷</a>
+                        <a href="#" class="social-btn">P</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Women's Collection</a></li>
+                        <li><a href="#">Men's Collection</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale & Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About LUXE</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Journal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                 <p>&copy; 2025 LUXE Premium Fashion.Made by SujithVarma D G(24BCI0205)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

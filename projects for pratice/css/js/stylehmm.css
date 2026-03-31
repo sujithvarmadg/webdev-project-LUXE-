@@ -1,0 +1,51 @@
+body {
+  font-family: Arial;
+}
+
+#mainImg {
+  width: 35%;
+}
+
+.green{
+    text-decoration:underline black wavy;
+    color:green;
+}
+
+.box {
+  border: 0.25px solid black;
+  background-color: lightgray;
+  width: 200px;
+  padding: 1rem;
+}
+.yellowbg{
+   background-color:yellow;
+}
+
+.boxLink {
+  text-decoration: none;
+}
+
+.oldImg {
+  height: 200px;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+#description {
+  background-color: antiquewhite;
+}
+.divs{
+  border:"10px solid black";
+  background-color:violet;
+}
+.parastyle{
+   color:violet;
+}
+.heads{
+    color:purple;
+    text-decoration:underline;
+}
+.btnc{
+  background-color:blue;
+  color:antiquewhite;
+}

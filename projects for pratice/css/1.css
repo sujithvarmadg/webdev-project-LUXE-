@@ -1,0 +1,54 @@
+/*p{
+    color:blueviolet;
+    background-color:mediumaquamarine;
+}
+h1{
+    color:blue;
+    background-color:goldenrod;
+
+}
+button{
+    color:gold;
+    background-color:red;
+}
+*/
+/* q1 
+h2{
+    color:rgb(231, 100, 12);
+    text-align:center;
+    text-decoration: purple wavy underline;
+    letter-spacing:2px;
+    font-family:copperplate;
+}
+p{
+    color:orangered;
+    background-color:#e7c7e6;
+    text-align:center;
+    font-weight:lighter;
+    text-decoration: red overline;
+    line-height:2.5;
+    font-size:23px;
+    font-family:avant garde,didot,sans-serif;
+}
+button{
+    color:white;
+    background-color: #e7bfe7;
+    text-decoration:  skyblue dotted overline;
+
+}
+a{
+    text-decoration:none;
+}
+*/
+h1{
+    font-family:League spartan;
+    color:#ffa511;
+    text-align:center;
+    font-size:55px;
+    font-weight:900;
+    letter-spacing:2px;
+    line-height:1.5;
+    text-decoration:teal double underline;
+    text-transform: uppercase;
+
+}
